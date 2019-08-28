@@ -13,6 +13,7 @@ class Client : public QObject
     Q_OBJECT
 public:
     explicit Client(QObject *parent = nullptr);
+    Client(qintptr socket_descriptor, QObject *parent = nullptr);
 
     void connect();
 

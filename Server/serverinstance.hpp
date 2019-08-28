@@ -9,7 +9,7 @@
 
 #include <QObject>
 
-#include "serverinstanceclient_global.h"
+#include "client.hpp"
 
 class ServerInstance : public QTcpServer
 {
@@ -25,6 +25,12 @@ public:
 protected:
 
     void incomingConnection(qintptr handle);
+
+private:
+
+    QVector<Client*> _clients;
+
+    void removeClient(qintptr SID);
 };
 
 #endif // SERVERINSTANCE_HPP
