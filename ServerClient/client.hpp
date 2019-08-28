@@ -16,6 +16,8 @@ public:
     Client(qintptr socket_descriptor, QObject *parent = nullptr);
 
     void connect();
+    qintptr  socketDescriptor();
+    void write();
 
 signals:
 
