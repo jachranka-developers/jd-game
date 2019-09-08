@@ -10,6 +10,7 @@ Client::Client(QObject *parent) : QObject(parent)
     QObject::connect(_socket, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error),this,&Client::_error);
 
     _stream.setDevice(_socket);
+    _stream.setVersion(QDataStream::Qt_5_12);
 }
 
 Client::Client(qintptr socket_descriptor, QObject *parent)
@@ -41,13 +42,24 @@ qintptr Client::socketDescriptor()
 void Client::write()
 {
     QByteArray data;
-    QDataStream stream(&data,QIODevice::ReadOnly);
+    QDataStream stream(&data,QIODevice::WriteOnly);
 
     _socket->write(data);
 }
 
 void Client::_read()
 {
-    _stream.startTransaction();
+    QJsonDocument result;
+    QByteArray data;
 
+    _stream.startTransaction();
+    _stream >> data;
+
+    if(!_stream.commitTransaction())
+    {
+        return;
+    }
+
+    result = QJsonDocument::fromBinaryData(data);
+    emit message(result);
 }

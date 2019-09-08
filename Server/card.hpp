@@ -3,11 +3,19 @@
 
 #include <QObject>
 
-class Card : public QObject
+class Card
 {
-    Q_OBJECT
+
+    int id {0};
+    int hitpoints {0};
+    int damage {0};
+    int productivity {0};
+
+    QString name;
+    QString description;
+
 public:
-    explicit Card(QObject *parent = nullptr);
+    explicit Card();
 
 signals:
 

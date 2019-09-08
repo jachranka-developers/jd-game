@@ -20,11 +20,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 win32:include($$PWD\..\ServerClient\ServerClient.pri)
 
 SOURCES += \
+        card.cpp \
+        deck.cpp \
         main.cpp \
+        player.cpp \
         serverinstance.cpp \
         session.cpp
 
 HEADERS += \
+    card.hpp \
+    deck.hpp \
+    player.hpp \
     serverinstance.hpp \
     session.hpp
 

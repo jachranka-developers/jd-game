@@ -1,7 +1,8 @@
 INCLUDEPATH += $$PWD
 
 HEADERS += \
-        $$PWD/client.hpp
+        $$PWD/client.hpp \
+        $$PWD/messages.h
 
 SOURCES += \
         $$PWD/client.cpp

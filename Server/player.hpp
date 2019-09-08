@@ -2,6 +2,7 @@
 #define PLAYER_HPP
 
 #include <QObject>
+#include "deck.hpp"
 
 class Player : public QObject
 {
@@ -12,6 +13,11 @@ public:
 signals:
 
 public slots:
+
+private:
+
+    Deck _deck;
+
 };
 
 #endif // PLAYER_HPP

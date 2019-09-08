@@ -5,7 +5,7 @@
 #include <QtNetwork/QAbstractSocket>
 
 #include <QDataStream>
-
+#include <QJsonDocument>
 #include <QObject>
 
 class Client : public QObject
@@ -23,6 +23,7 @@ signals:
 
     void connected();
     void disconnected();
+    void message(QJsonDocument message);
 
 public slots:
 

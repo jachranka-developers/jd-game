@@ -9,7 +9,11 @@
 
 #include <QObject>
 
+#include <QJsonObject>
+
 #include "client.hpp"
+#include "session.hpp"
+#include "messages.h"
 
 class ServerInstance : public QTcpServer
 {
@@ -26,11 +30,20 @@ protected:
 
     void incomingConnection(qintptr handle);
 
+private slots:
+
+    void dispatcher(QJsonDocument message, int SID);
+
 private:
 
     QVector<Client*> _clients;
 
     void removeClient(qintptr SID);
+
+    QVector<Session> _sessions;
+
+    int assignClient(int SID);
+
 };
 
 #endif // SERVERINSTANCE_HPP
