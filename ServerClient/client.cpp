@@ -41,7 +41,7 @@ qintptr Client::socketDescriptor()
 void Client::write()
 {
     QByteArray data;
-    QDataStream stream(&data,QIODevice::WriteOnly);
+    QDataStream stream(&data,QIODevice::ReadOnly);
 
     _socket->write(data);
 }

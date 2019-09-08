@@ -21,10 +21,12 @@ win32:include($$PWD\..\ServerClient\ServerClient.pri)
 
 SOURCES += \
         main.cpp \
-        serverinstance.cpp
+        serverinstance.cpp \
+        session.cpp
 
 HEADERS += \
-    serverinstance.hpp
+    serverinstance.hpp \
+    session.hpp
 
 # Default rules for deployment.
 
