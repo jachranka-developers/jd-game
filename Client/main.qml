@@ -25,10 +25,14 @@ ApplicationWindow {
                 }
             }
         }
-
         Label {
             text: stackView.currentItem.title
             anchors.centerIn: parent
+        }
+        ToolButton {
+            text: qsTr("Zamknij [X]")
+            onClicked: window.close()
+            anchors.right: parent.right
         }
     }
 
@@ -41,10 +45,18 @@ ApplicationWindow {
             anchors.fill: parent
 
             ItemDelegate {
-                text: qsTr("Page 1")
+                text: qsTr("Login Form")
                 width: parent.width
                 onClicked: {
-                    stackView.push("Page1Form.ui.qml")
+                    stackView.push("LoginForm.ui.qml")
+                    drawer.close()
+                }
+            }
+            ItemDelegate {
+                text: qsTr("Dashboard")
+                width: parent.width
+                onClicked: {
+                    stackView.push("Dashboard.ui.qml")
                     drawer.close()
                 }
             }
@@ -53,14 +65,6 @@ ApplicationWindow {
                 width: parent.width
                 onClicked: {
                     stackView.push("Page2Form.ui.qml")
-                    drawer.close()
-                }
-            }
-            ItemDelegate {
-                text: qsTr("Login Form")
-                width: parent.width
-                onClicked: {
-                    stackView.push("LoginForm.ui.qml")
                     drawer.close()
                 }
             }
