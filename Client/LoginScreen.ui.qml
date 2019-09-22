@@ -36,6 +36,7 @@ Page {
             //lineHeight: 1.4
             font.family: "Verdana"
             font.pointSize: 50
+            fontSizeMode: Text.Fit
         }
 
         Image {
@@ -61,6 +62,7 @@ Page {
             font.pointSize: 35
             Layout.row: 3
             Layout.column: 2
+            fontSizeMode: Text.Fit
         }
 
         TextField {
@@ -85,6 +87,7 @@ Page {
             font.pointSize: 35
             Layout.row: 4
             Layout.column: 2
+            fontSizeMode: Text.Fit
         }
 
         TextField {

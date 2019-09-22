@@ -4,8 +4,8 @@ import QtQuick.Layouts 1.3
 
 Page {
     id: loginPage
-    width: 1920
-    height: 1024
+    //width: 1920
+    //height: 1024
     title: qsTr("Dashboard")
 
     Rectangle {
@@ -38,6 +38,7 @@ Page {
                     color: "#ffffff"
                     text: qsTr("Hello:")
                     font.pixelSize: 70
+                    fontSizeMode: Text.Fit
                 }
 
                 Text {
@@ -46,6 +47,7 @@ Page {
                     text: qsTr("Rank:")
                     //anchors.top: lblLogin.bottom
                     font.pixelSize: 70
+                    fontSizeMode: Text.Fit
                 }
             }
 
@@ -61,6 +63,7 @@ Page {
                     text: qsTr("---")
                     anchors.leftMargin: 0
                     font.pixelSize: 70
+                    fontSizeMode: Text.Fit
                 }
 
                 Text {
@@ -69,6 +72,7 @@ Page {
                     text: qsTr("---")
                     font.pixelSize: 70
                     anchors.leftMargin: 0
+                    fontSizeMode: Text.Fit
                 }
             }
         }

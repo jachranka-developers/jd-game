@@ -1,11 +1,13 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>HomeForm.ui.qml</file>
-        <file>Dashboard.ui.qml</file>
-        <file>Page2Form.ui.qml</file>
+        <file>LobbyScreen.ui.qml</file>
+        <file>DashboardScreen.ui.qml</file>
+        <file>SettingsScreen.ui.qml</file>
         <file>qtquickcontrols2.conf</file>
-        <file>LoginForm.ui.qml</file>
+        <file>LoginScreen.ui.qml</file>
         <file>assets/JD.png</file>
+        <file>rings/Ring.qml</file>
+        <file>rings/LoadingRings.qml</file>
     </qresource>
 </RCC>

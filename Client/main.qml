@@ -4,10 +4,10 @@ import QtQuick.Controls 2.5
 ApplicationWindow {
     id: window
     visible: true
-    maximumHeight: 720
-    maximumWidth: 1024
-    //visibility:"Maximized"
-    visibility:"FullScreen"
+    //maximumHeight: 720
+    //maximumWidth: 1024
+    visibility:"Maximized"
+    //visibility:"FullScreen"
     title: qsTr("Game")
 
     header: ToolBar {
@@ -48,7 +48,7 @@ ApplicationWindow {
                 text: qsTr("Login Form")
                 width: parent.width
                 onClicked: {
-                    stackView.push("LoginForm.ui.qml")
+                    stackView.push("LoginScreen.ui.qml")
                     drawer.close()
                 }
             }
@@ -56,15 +56,15 @@ ApplicationWindow {
                 text: qsTr("Dashboard")
                 width: parent.width
                 onClicked: {
-                    stackView.push("Dashboard.ui.qml")
+                    stackView.push("DashboardScreen.ui.qml")
                     drawer.close()
                 }
             }
             ItemDelegate {
-                text: qsTr("Page 2")
+                text: qsTr("Settings")
                 width: parent.width
                 onClicked: {
-                    stackView.push("Page2Form.ui.qml")
+                    stackView.push("SettingsScreen.ui.qml")
                     drawer.close()
                 }
             }
@@ -73,7 +73,7 @@ ApplicationWindow {
 
     StackView {
         id: stackView
-        initialItem: "HomeForm.ui.qml"
+        initialItem: "LobbyScreen.ui.qml"
         anchors.fill: parent
     }
 }
