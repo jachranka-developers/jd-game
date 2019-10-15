@@ -22,7 +22,6 @@ Page {
         anchors.topMargin: 30
         anchors.fill: parent
 
-
         Label {
             id: lblTitle
             color: "#0046d2"
@@ -41,6 +40,7 @@ Page {
 
         Image {
             id: imgLogo
+            Layout.fillWidth: false
             Layout.minimumHeight: 150
             Layout.maximumHeight: 333
             Layout.maximumWidth: 333
@@ -56,6 +56,7 @@ Page {
             id: lblLogin
             color: "#419ef5"
             text: qsTr("Login:")
+            horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillHeight: true
@@ -76,11 +77,11 @@ Page {
             Layout.column: 3
         }
 
-
         Label {
             id: lblPassword
             color: "#419ef5"
             text: qsTr("Password:")
+            horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillHeight: true
@@ -104,8 +105,8 @@ Page {
 
         RowLayout {
             id: rowLayout
-            width: 100
-            height: 100
+            //width: 100
+            //height: 100
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillHeight: true
             Layout.fillWidth: true
@@ -120,7 +121,15 @@ Page {
                 Layout.row: 5
                 checkable: false
                 highlighted: true
-                font.pointSize: 35
+                contentItem: Text{
+                    fontSizeMode: Text.Fit
+                    font.pointSize: 35
+                    minimumPointSize: 1
+                    text: bttnLogin.text
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
             }
 
             Button {
@@ -132,8 +141,16 @@ Page {
                 Layout.fillHeight: true
                 Layout.column: 3
                 Layout.row: 5
-                font.pointSize: 35
                 checkable: false
+                contentItem: Text{
+                    fontSizeMode: Text.Fit
+                    font.pointSize: 35
+                    minimumPointSize: 1
+                    text: bttnClear.text
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
             }
         }
     }

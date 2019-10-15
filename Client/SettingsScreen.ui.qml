@@ -16,6 +16,8 @@ Page {
 
     GridLayout {
         id: gridLayout
+        columnSpacing: 6
+        rowSpacing: 6
         anchors.rightMargin: 50
         anchors.leftMargin: 50
         anchors.bottomMargin: 50
@@ -126,7 +128,7 @@ Page {
 
         Text {
             id: lblLanguageRow
-            text: qsTr("Fullscreen")
+            text: qsTr("Language")
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: 40
             Layout.fillHeight: true
@@ -151,35 +153,52 @@ Page {
         }
 
         Button {
-            id: btnCancel
+            id: bttnCancel
             text: qsTr("Cancel")
             Layout.fillHeight: true
-            font.pointSize: 40
             Layout.fillWidth: true
+            contentItem: Text{
+                fontSizeMode: Text.Fit
+                font.pointSize: 70
+                minimumPointSize: 1
+                text: bttnCancel.text
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                elide: Text.ElideRight
+            }
         }
 
         Button {
-            id: btnDefault
+            id: bttnDefault
             text: qsTr("Default settings")
-            font.pointSize: 40
             Layout.fillHeight: true
             Layout.fillWidth: true
+            contentItem: Text{
+                fontSizeMode: Text.Fit
+                font.pointSize: 70
+                minimumPointSize: 1
+                text: bttnDefault.text
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                elide: Text.ElideRight
+            }
         }
 
         Button {
-            id: btnSave
+            id: bttnSave
             text: qsTr("Save changes")
-            font.pointSize: 40
             Layout.fillHeight: true
             Layout.fillWidth: true
+            contentItem: Text{
+                fontSizeMode: Text.Fit
+                font.pointSize: 70
+                minimumPointSize: 1
+                text: bttnSave.text
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                elide: Text.ElideRight
+            }
+            //onClicked: console.log(ApplicationWindow.title)
         }
-
-
     }
 }
-
-
-/*##^## Designer {
-    D{i:0;autoSize:true;height:480;width:640}
-}
- ##^##*/

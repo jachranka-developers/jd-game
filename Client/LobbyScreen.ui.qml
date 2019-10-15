@@ -10,7 +10,7 @@ Page {
 
     property alias timeNumber: timeNumber
     property alias text1: text1
-    property alias bAccept: bAccept
+    property alias bttnAccept: bttnAccept
 
     Rectangle {
         id: background
@@ -29,7 +29,7 @@ Page {
         Text {
             id: text1
             color: "#ffffff"
-            text: qsTr("Wyszukiwanie przeciwnika")
+            text: qsTr("Searching opponent...")
             horizontalAlignment: Text.AlignHCenter
             Layout.fillWidth: true
             font.bold: true
@@ -62,17 +62,21 @@ Page {
         }
 
         Button {
-            id: bAccept
-            text: qsTr("Akceptuj")
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            id: bttnAccept
+            text: qsTr("Accept")
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            //Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             enabled: false
-            font.pointSize: 40
+            contentItem: Text{
+                fontSizeMode: Text.Fit
+                font.pointSize: 70
+                minimumPointSize: 1
+                text: bttnAccept.text
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                elide: Text.ElideRight
+            }
         }
-
     }
 }
-
-/*##^## Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:5;anchors_x:0;anchors_y:352}D{i:6;anchors_x:956;anchors_y:375}
-}
- ##^##*/

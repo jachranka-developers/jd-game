@@ -38,6 +38,8 @@ Page {
                     color: "#ffffff"
                     text: qsTr("Hello:")
                     font.pixelSize: 70
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
                     fontSizeMode: Text.Fit
                 }
 
@@ -47,6 +49,8 @@ Page {
                     text: qsTr("Rank:")
                     //anchors.top: lblLogin.bottom
                     font.pixelSize: 70
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
                     fontSizeMode: Text.Fit
                 }
             }
@@ -63,6 +67,8 @@ Page {
                     text: qsTr("---")
                     anchors.leftMargin: 0
                     font.pixelSize: 70
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
                     fontSizeMode: Text.Fit
                 }
 
@@ -72,6 +78,8 @@ Page {
                     text: qsTr("---")
                     font.pixelSize: 70
                     anchors.leftMargin: 0
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
                     fontSizeMode: Text.Fit
                 }
             }
@@ -89,6 +97,9 @@ Page {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 font.pixelSize: 25
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                fontSizeMode: Text.Fit
             }
         }
 
@@ -101,22 +112,46 @@ Page {
             Button {
                 id: bttnGame
                 text: qsTr("Play")
-                font.pointSize: 50
                 Layout.fillWidth: true
+                contentItem: Text{
+                    fontSizeMode: Text.Fit
+                    font.pointSize: 50
+                    minimumPointSize: 1
+                    text: bttnGame.text
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
             }
 
             Button {
                 id: bttnCards
                 text: qsTr("Your cards")
-                font.pointSize: 50
                 Layout.fillWidth: true
+                contentItem: Text{
+                    fontSizeMode: Text.Fit
+                    font.pointSize: 50
+                    minimumPointSize: 1
+                    text: bttnCards.text
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
             }
 
             Button {
                 id: bttnSettings
                 text: qsTr("Settings")
-                font.pointSize: 50
                 Layout.fillWidth: true
+                contentItem: Text{
+                    fontSizeMode: Text.Fit
+                    font.pointSize: 50
+                    minimumPointSize: 1
+                    text: bttnSettings.text
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
             }
         }
     }
