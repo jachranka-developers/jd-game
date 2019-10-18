@@ -9,5 +9,7 @@
         <file>assets/JD.png</file>
         <file>rings/Ring.qml</file>
         <file>rings/LoadingRings.qml</file>
+        <file>EndGameScreen.ui.qml</file>
+        <file>GameAreaScreen.qml</file>
     </qresource>
 </RCC>

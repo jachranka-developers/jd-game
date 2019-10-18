@@ -4,13 +4,8 @@ import QtQuick.Layouts 1.3
 import "rings"
 
 Page {
-    //width: 1920
-    //height: 1024
+    id: lobbyPage
     title: qsTr("Home")
-
-    property alias timeNumber: timeNumber
-    property alias text1: text1
-    property alias bttnAccept: bttnAccept
 
     Rectangle {
         id: background
@@ -20,9 +15,9 @@ Page {
 
     ColumnLayout {
         id: columnLayout
-        anchors.bottomMargin: 50
         anchors.rightMargin: 50
         anchors.leftMargin: 50
+        anchors.bottomMargin: 50
         anchors.topMargin: 50
         anchors.fill: parent
 
@@ -30,6 +25,7 @@ Page {
             id: text1
             color: "#ffffff"
             text: qsTr("Searching opponent...")
+            Layout.fillHeight: true
             horizontalAlignment: Text.AlignHCenter
             Layout.fillWidth: true
             font.bold: true
@@ -39,6 +35,7 @@ Page {
 
         Item {
             id: element
+            height: 300
             Layout.fillHeight: true
             Layout.fillWidth: true
 
@@ -46,18 +43,19 @@ Page {
                 id: loadingAnim
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                scale: 3
-            }
+                scale: 1
 
-            Text {
-                id: timeNumber
-                color: "#ffffff"
-                text: qsTr("0")
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
-                font.bold: true
-                font.pixelSize: 70
-                fontSizeMode: Text.Fit
+                Text {
+                    id: timeNumber
+                    color: "#ffffff"
+                    text: qsTr("0")
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    anchors.fill: parent
+                    font.bold: true
+                    font.pixelSize: 40
+                    fontSizeMode: Text.Fit
+                }
             }
         }
 
@@ -66,7 +64,6 @@ Page {
             text: qsTr("Accept")
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             enabled: false
             contentItem: Text{
                 fontSizeMode: Text.Fit
@@ -78,5 +75,7 @@ Page {
                 elide: Text.ElideRight
             }
         }
+
     }
+
 }

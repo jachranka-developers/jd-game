@@ -40,15 +40,16 @@ Page {
 
         Image {
             id: imgLogo
-            Layout.fillWidth: false
-            Layout.minimumHeight: 150
-            Layout.maximumHeight: 333
-            Layout.maximumWidth: 333
-            Layout.minimumWidth: 150
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            //Layout.minimumHeight: 150
+            //Layout.maximumHeight: 333
+            //Layout.maximumWidth: 333
+            //Layout.minimumWidth: 150
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            Layout.preferredHeight: 250
-            Layout.preferredWidth: 250
-            fillMode: Image.Stretch
+            //Layout.preferredHeight: 250
+            //Layout.preferredWidth: 250
+            fillMode: Image.PreserveAspectFit
             source: "assets/JD.png"
         }
 

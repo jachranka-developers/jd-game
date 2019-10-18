@@ -3,7 +3,7 @@ import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
 
 Page {
-    id: loginPage
+    id: dashboardPage
     //width: 1920
     //height: 1024
     title: qsTr("Dashboard")
@@ -41,6 +41,8 @@ Page {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     fontSizeMode: Text.Fit
+                    //Layout.fillHeight: true
+                    //Layout.fillWidth: true
                 }
 
                 Text {
@@ -52,6 +54,8 @@ Page {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     fontSizeMode: Text.Fit
+                    //Layout.fillHeight: true
+                    //Layout.fillWidth: true
                 }
             }
 
@@ -70,6 +74,8 @@ Page {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     fontSizeMode: Text.Fit
+                    //Layout.fillHeight: true
+                    //Layout.fillWidth: true
                 }
 
                 Text {
@@ -81,6 +87,8 @@ Page {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     fontSizeMode: Text.Fit
+                    //Layout.fillHeight: true
+                    //Layout.fillWidth: true
                 }
             }
         }
@@ -89,11 +97,13 @@ Page {
             id: contentRow
             width: 100
             height: 100
+            Layout.fillHeight: true
+            Layout.fillWidth: true
 
             Text {
                 id: txtDescriptionText
                 color: "#ffffff"
-                text: qsTr("")
+                text: qsTr("Have a fun time!")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 font.pixelSize: 25
@@ -113,7 +123,7 @@ Page {
                 id: bttnGame
                 text: qsTr("Play")
                 Layout.fillWidth: true
-                contentItem: Text{
+                contentItem: Text {
                     fontSizeMode: Text.Fit
                     font.pointSize: 50
                     minimumPointSize: 1
@@ -128,7 +138,7 @@ Page {
                 id: bttnCards
                 text: qsTr("Your cards")
                 Layout.fillWidth: true
-                contentItem: Text{
+                contentItem: Text {
                     fontSizeMode: Text.Fit
                     font.pointSize: 50
                     minimumPointSize: 1
@@ -143,7 +153,7 @@ Page {
                 id: bttnSettings
                 text: qsTr("Settings")
                 Layout.fillWidth: true
-                contentItem: Text{
+                contentItem: Text {
                     fontSizeMode: Text.Fit
                     font.pointSize: 50
                     minimumPointSize: 1

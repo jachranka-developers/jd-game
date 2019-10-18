@@ -7,6 +7,8 @@ ApplicationWindow {
     //maximumHeight: 720
     //maximumWidth: 1024
     visibility:"Maximized"
+    minimumHeight: 450
+    minimumWidth: 350
     //visibility:"FullScreen"
     title: qsTr("Game")
 
@@ -65,6 +67,22 @@ ApplicationWindow {
                 width: parent.width
                 onClicked: {
                     stackView.push("SettingsScreen.ui.qml")
+                    drawer.close()
+                }
+            }
+            ItemDelegate {
+                text: qsTr("EndGameScreen")
+                width: parent.width
+                onClicked: {
+                    stackView.push("EndGameScreen.ui.qml")
+                    drawer.close()
+                }
+            }
+            ItemDelegate {
+                text: qsTr("GameArea")
+                width: parent.width
+                onClicked: {
+                    stackView.push("GameAreaScreen.qml")
                     drawer.close()
                 }
             }
