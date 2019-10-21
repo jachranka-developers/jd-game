@@ -86,12 +86,20 @@ ApplicationWindow {
                     drawer.close()
                 }
             }
+            ItemDelegate {
+                text: qsTr("LobbyScreen")
+                width: parent.width
+                onClicked: {
+                    stackView.push("LobbyScreen.ui.qml")
+                    drawer.close()
+                }
+            }
         }
     }
 
     StackView {
         id: stackView
-        initialItem: "LobbyScreen.ui.qml"
+        initialItem: "GameAreaScreen.qml"
         anchors.fill: parent
     }
 }
