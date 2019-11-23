@@ -7,5 +7,6 @@ set(CMAKE_AUTOMOC ON)
 
 add_subdirectory(Common)
 add_subdirectory(Server)
+add_subdirectory(ServerClient)
 
 

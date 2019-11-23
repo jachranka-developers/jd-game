@@ -1,8 +1,8 @@
 #ifndef CLIENT_HPP
 #define CLIENT_HPP
 
-#include <QtNetwork/QTcpSocket>
-#include <QtNetwork/QAbstractSocket>
+#include <QtNetwork>
+//#include <QtNetwork/QAbstractSocket>
 
 #include <QDataStream>
 #include <QJsonDocument>

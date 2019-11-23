@@ -11,6 +11,8 @@ set(SOURCES main.cpp
     serverinstance.cpp
     session.cpp
     player.cpp
+    deck.cpp
+    card.cpp
     )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
