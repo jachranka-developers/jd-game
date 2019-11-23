@@ -11,9 +11,12 @@
 
 #include <QJsonObject>
 
+
 #include "client.hpp"
 #include "session.hpp"
 #include "messages.h"
+
+#include <QDebug>
 
 class ServerInstance : public QTcpServer
 {

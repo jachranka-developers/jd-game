@@ -12,7 +12,13 @@ ServerInstance::~ServerInstance()
 
 bool ServerInstance::start()
 {
-    return this->listen(QHostAddress::Any,3456);
+    auto result = this->listen(QHostAddress::Any,3456);
+    if(result)
+    {
+        qDebug() << QDateTime::currentDateTimeUtc() << " SERVER START LISTEN ";
+    }
+
+    return result;
 }
 
 void ServerInstance::stop()
