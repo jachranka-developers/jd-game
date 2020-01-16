@@ -46,6 +46,7 @@ Page {
                     Layout.fillWidth: true
                     Layout.column: 2
                     font.pixelSize: 70
+                    minimumPointSize: 20
                     fontSizeMode: Text.Fit
                 }
 
@@ -59,6 +60,7 @@ Page {
                     verticalAlignment: Text.AlignVCenter
                     Layout.column: 5
                     font.pixelSize: 70
+                    minimumPointSize: 20
                     font.bold: true
                     horizontalAlignment: Text.AlignHCenter
                 }
@@ -73,6 +75,7 @@ Page {
                     verticalAlignment: Text.AlignVCenter
                     Layout.column: 8
                     font.pixelSize: 70
+                    minimumPointSize: 20
                     font.bold: true
                     horizontalAlignment: Text.AlignHCenter
                 }

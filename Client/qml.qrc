@@ -11,5 +11,6 @@
         <file>rings/LoadingRings.qml</file>
         <file>EndGameScreen.ui.qml</file>
         <file>GameAreaScreen.qml</file>
+        <file>GameAreaScreen_kopia.qml</file>
     </qresource>
 </RCC>

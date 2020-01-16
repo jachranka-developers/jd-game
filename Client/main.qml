@@ -99,7 +99,7 @@ ApplicationWindow {
 
     StackView {
         id: stackView
-        initialItem: "GameAreaScreen.qml"
+        initialItem: "GameAreaScreen_kopia.qml"
         anchors.fill: parent
     }
 }
